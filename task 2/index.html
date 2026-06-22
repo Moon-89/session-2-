@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <meta name="description" content="Sign up for our premium secure service. Responsive registration form with instant client-side validation.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-decorations" aria-hidden="true">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  </div>
+
+  <main class="container">
+    <div class="form-card">
+
+      <div class="form-header">
+        <h1>Create Account</h1>
+        <p class="subtitle">Join our platform and start your journey today.</p>
+      </div>
+
+      <form id="registration-form" novalidate>
+
+        <div class="input-group-container">
+          <label for="full-name" class="input-label">Full Name</label>
+          <div class="input-wrapper">
+            <span class="input-icon"><i class="fa-solid fa-user"></i></span>
+            <input type="text" id="full-name" placeholder="John Doe" autocomplete="name" required>
+            <span class="status-icon" id="name-status"></span>
+          </div>
+          <div class="error-text" id="name-error" aria-live="polite"></div>
+        </div>
+
+        <div class="input-group-container">
+          <label for="email" class="input-label">Email Address</label>
+          <div class="input-wrapper">
+            <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
+            <input type="email" id="email" placeholder="john@example.com" autocomplete="email" required>
+            <span class="status-icon" id="email-status"></span>
+          </div>
+          <div class="error-text" id="email-error" aria-live="polite"></div>
+        </div>
+
+        <div class="input-group-container">
+          <label for="phone" class="input-label">Phone Number</label>
+          <div class="input-wrapper">
+            <span class="input-icon"><i class="fa-solid fa-phone"></i></span>
+            <input type="tel" id="phone" placeholder="+92 300-0000000" autocomplete="tel" required>
+            <span class="status-icon" id="phone-status"></span>
+          </div>
+          <div class="error-text" id="phone-error" aria-live="polite"></div>
+        </div>
+
+        <div class="input-group-container">
+          <label for="password" class="input-label">Password</label>
+          <div class="input-wrapper">
+            <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" id="password" placeholder="••••••••" autocomplete="new-password" required>
+            <button type="button" class="toggle-password" aria-label="Toggle Password Visibility" data-target="password">
+              <i class="fa-solid fa-eye-slash eye-off"></i>
+              <i class="fa-solid fa-eye eye-on hidden"></i>
+            </button>
+          </div>
+          <div class="error-text" id="password-error" aria-live="polite"></div>
+        </div>
+
+        <div class="input-group-container">
+          <label for="confirm-password" class="input-label">Confirm Password</label>
+          <div class="input-wrapper">
+            <span class="input-icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <input type="password" id="confirm-password" placeholder="••••••••" autocomplete="new-password" required>
+            <button type="button" class="toggle-password" aria-label="Toggle Password Visibility" data-target="confirm-password">
+              <i class="fa-solid fa-eye-slash eye-off"></i>
+              <i class="fa-solid fa-eye eye-on hidden"></i>
+            </button>
+          </div>
+          <div class="error-text" id="confirm-password-error" aria-live="polite"></div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <span class="btn-text"><i class="fa-solid fa-rocket"></i> &nbsp;Sign Up</span>
+          <span class="spinner hidden"></span>
+        </button>
+
+      </form>
+    </div>
+
+    <div class="modal-overlay hidden" id="success-modal">
+      <div class="modal-card">
+        <div class="success-icon-wrapper">
+          <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+        <h2>Registration Successful!</h2>
+        <p>Your account has been created successfully. Welcome to our community.</p>
+        <button type="button" class="btn-close-modal" id="close-modal-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> &nbsp;Continue to Dashboard
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

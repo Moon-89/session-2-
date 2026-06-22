@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><a href="index.html">NayaQadam</a></div>
+    <button class="nav-toggle" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero contact-hero">
+      <div class="container">
+        <h1 class="page-title">Contact Us</h1>
+        <p class="page-subtitle">Get in touch with NayaQadam.</p>
+        <p class="page-description">Send a short message — we reply within 48 hours with next steps.</p>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="container contact-grid">
+        <div class="contact-box">
+          <h2>Contact info</h2>
+          <p><strong>Email:</strong> hello@nayaqadam.com</p>
+          <p><strong>Phone:</strong> +92 300 1234567</p>
+        </div>
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="button primary">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-copy">© 2026 NayaQadam. All rights reserved.</div>
+    
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
